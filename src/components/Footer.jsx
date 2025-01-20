@@ -1,15 +1,15 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Importe os ícones das redes sociais
+import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa'; 
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12">
-      <section>
-        {/*Informações para contato */}
-        <div>
-
+    <footer className="bg-black text-white py-12">
+      <section className="mt-30">
+        {/* Informações para contato */}
+        <div className="text-center">
+          <p className="text-3xl font-bold mb-6">Contato</p>
         </div>
         {/* Rodapé inferior com ícones das redes sociais */}
-        <div className="mt-12 border-t border-gray-700 pt-6 text-center">
+        <div className="pt-6 text-center">
           <div className="flex justify-center space-x-6 mb-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="text-white text-2xl hover:text-indigo-600 transition duration-300" />
