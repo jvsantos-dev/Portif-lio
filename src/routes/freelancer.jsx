@@ -1,7 +1,6 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';  // Importando os ícones
-import eu_hoje from '../assets/eu_hoje.png';
 
-const Empresa = () => {
+const Freelancer = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Seção sobre a Empresa */}
@@ -29,7 +28,7 @@ const Empresa = () => {
           {/* Imagem vertical */}
           <div className="w-48 h-48 rounded-full overflow-hidden">
             <img
-              src={eu_hoje} // Aqui você usa a importação da imagem corretamente
+              src="{}" // Aqui você usa a importação da imagem corretamente
               alt="Seu nome"
               className="w-full h-full object-cover"
             />
@@ -78,4 +77,4 @@ const Empresa = () => {
   );
 };
 
-export default Empresa;
+export default Freelancer;

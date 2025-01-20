@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/1.png'; // Importe o logo da sua empresa
 
 const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -12,12 +11,7 @@ const Nav = () => {
   return (
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link to="/home" className="-m-1.5 p-1.5">
-            <span className="sr-only">Wise Energy</span>
-            <img className="w-20 h-20 w-auto" src={logo} alt="Wise Energy Logo" />
-          </Link>
-        </div>
+        
 
         {/* Botão para abrir o menu mobile */}
         <div className="flex lg:hidden">
@@ -60,10 +54,6 @@ const Nav = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
                       </svg>
                     </div>
-                    <div className="flex-auto">
-                      <Link to="/cards" className="block font-semibold text-gray-900">Cards</Link>
-                      <p className="mt-1 text-gray-600">Get a better understanding of your traffic</p>
-                    </div>
                   </div>
                   {/* Mais itens de menu aqui */}
                 </div>
@@ -89,7 +79,7 @@ const Nav = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Wise Energy</span>
-              <img className="h-8 w-auto" src={logo} alt="Wise Energy Logo" />
+              <img className="h-8 w-auto" src="{}" alt="Wise Energy Logo" />
             </Link>
             <button
               type="button"

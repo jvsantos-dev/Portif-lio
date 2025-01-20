@@ -1,49 +1,6 @@
-import { useState } from 'react';
-import slideshow1 from '../assets/slideshow1.jpg';
-import slideshow2 from '../assets/slideshow2.jpg';
-import slideshow3 from '../assets/slideshow3.jpg';
-import solucao1 from '../assets/solucao1.png';
-import solucao2 from '../assets/solucao2.jpg';
-import solucao3 from '../assets/solucao3.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-  // Dados do slideshow com imagens locais
-  const slideshowImages = [
-    slideshow1,
-    slideshow2,
-    slideshow3
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slideshowImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slideshowImages.length - 1 : prevSlide - 1
-    );
-  };
-
-  // Dados dos cards com imagens locais
-  const solutionCards = [
-    {
-      title: "Solução 1",
-      description: "",
-      image: solucao1,
-    },
-    {
-      title: "Solução 2",
-      description: "",
-      image: solucao2,
-    },
-    {
-      title: "Solução 3",
-      description: "",
-      image: solucao3,
-    },
-  ];
 
   return (
     <section className="min-h-screen bg-gray-100 p-6">
@@ -52,30 +9,6 @@ const Home = () => {
         <h1 className="text-4xl font-bold text-gray-800">Bem-vindo à Solução Meteorológica</h1>
         <p className="text-xl text-gray-600 mt-4">Explore as melhores soluções para monitoramento climático e previsão do tempo.</p>
       </header>
-
-      {/* Slideshow */}
-      <div className="relative mb-12">
-        <div className="w-full h-64 sm:h-80 lg:h-96 overflow-hidden rounded-lg">
-          <img
-            src={slideshowImages[currentSlide]}
-            alt="Slideshow"
-            className="w-full h-full object-cover transition-all duration-500"
-          />
-        </div>
-        {/* Botões de navegação do slideshow */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-        >
-          &#10094;
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
-        >
-          &#10095;
-        </button>
-      </div>
 
       {/* Texto sobre o tema */}
       <div className="text-center mb-12">
@@ -87,24 +20,34 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Cards de soluções */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {solutionCards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
-          >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800">{card.title}</h3>
-              <p className="text-gray-600 mt-2">{card.description}</p>
-            </div>
-          </div>
-        ))}
+      {/* Seção Sobre Mim */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-semibold text-gray-700">Sobre Mim</h2>
+        <p className="text-lg text-gray-600 mt-4">
+          Sou desenvolvedor e analista de dados apaixonado por soluções eficientes e inovação tecnológica. 
+          Minha principal motivação é otimizar processos e criar soluções automatizadas que agreguem valor 
+          aos negócios. 
+        </p>
+        <p className="text-lg text-gray-600 mt-4">
+          Com experiência em **Python**, **Excel**, **SQL** e **Power BI**, busco sempre aplicar meu conhecimento 
+          para resolver problemas complexos através de automação e análise de dados. Acredito que a tecnologia pode 
+          transformar desafios em oportunidades, e é isso que me move a cada novo projeto.
+        </p>
+        <p className="text-lg text-gray-600 mt-4">
+          Em meus projetos, tenho utilizado essas ferramentas para criar soluções que melhoram a eficiência operacional, 
+          otimizam fluxos de trabalho e proporcionam insights valiosos para as equipes de decisão. Além disso, estou sempre 
+          em busca de aprimorar meus conhecimentos e me manter atualizado com as tendências e inovações tecnológicas.
+        </p>
+        <p className="text-lg text-gray-600 mt-4">
+          Se você busca transformar dados em insights ou melhorar processos através de automação, fique à vontade para 
+          explorar meu portfólio e entrar em contato. Vamos conversar sobre como posso ajudar a sua empresa a alcançar 
+          seus objetivos de forma mais eficiente.
+        </p>
+      </div>
+
+      {/* Link para o portfólio ou página de contato */}
+      <div className="text-center mt-8">
+        <Link to="/contato" className="text-lg text-blue-600 underline">Entre em contato</Link>
       </div>
     </section>
   );
