@@ -25,7 +25,7 @@ const Nav = () => {
         {/* Menu Desktop */}
         <div className="hidden lg:flex lg:gap-x-12 mx-auto">
           <div className="flex space-x-12">  {/* Espaçamento entre os itens */}
-            <Link to="/sobre" className="text-sm font-semibold text-white hover:text-indigo-600">Sobre</Link>
+            <Link to="/sobre" className="text-sm font-semibold text-white hover:text-indigo-600">Projetos</Link>
             <Link to="/freelancer" className="text-sm font-semibold text-white hover:text-indigo-600">Freelancer</Link>
           </div>
         </div>

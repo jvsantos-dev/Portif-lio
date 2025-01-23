@@ -24,7 +24,6 @@ const Footer = () => {
               <FaEnvelope className="text-white text-2xl hover:text-indigo-600 transition duration-300" />
             </a>
           </div>
-          <p className="text-sm text-gray-400">&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
         </div>
       </section>
     </footer>

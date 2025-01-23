@@ -19,7 +19,7 @@ const Error = () => {
           
           {/* Link Home com ícone */}
           <Link
-            to="/"
+            to="/home"
             className="inline-flex items-center text-lg font-semibold text-white bg-blue-500 hover:bg-blue-400 px-6 py-2 rounded-full transition-all duration-200 ease-in-out"
           >
             Ir para Home
